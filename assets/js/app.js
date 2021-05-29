@@ -12,7 +12,7 @@ const margin = {
 const width = svgWidth - margin.left - margin.right;
 const height = svgHeight - margin.top - margin.bottom;
 
-// Create an SVG wrapper, append an SVG group that will hold our chart,
+// SVG wrapper, appending an SVG group that will hold chart,
 // and shift the latter by left and top margins.
 const svg = d3
   .select("#scatter")
