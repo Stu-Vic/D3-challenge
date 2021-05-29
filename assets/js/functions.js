@@ -1,4 +1,4 @@
-// function used for updating x-scale const upon click on axis label
+// this function used for updating x-scale const upon click on axis label
 function xScale(csvData, chosenXAxis) {
     // create scales
     let xLinearScale = d3.scaleLinear()
@@ -10,7 +10,7 @@ function xScale(csvData, chosenXAxis) {
     return xLinearScale;
   }
   
-  // function used for updating y-scale const upon click on axis label
+  // this function used for updating y-scale const upon click on axis label
   function yScale(csvData, chosenYAxis) {
     // create scales
     let yLinearScale = d3.scaleLinear()
@@ -22,7 +22,7 @@ function xScale(csvData, chosenXAxis) {
     return yLinearScale;
   }
   
-  // function used for updating xAxis const upon click on axis label
+  // this function used for updating xAxis const upon click on axis label
   function renderXAxes(newXScale, xAxis) {
     let bottomAxis = d3.axisBottom(newXScale);
   
@@ -33,7 +33,7 @@ function xScale(csvData, chosenXAxis) {
     return xAxis;
   }
   
-  // function used for updating yAxis const upon click on axis label
+  // this function used for updating yAxis const upon click on axis label
   function renderYAxes(newYScale, yAxis) {
     let leftAxis = d3.axisLeft(newYScale);
   
@@ -44,7 +44,7 @@ function xScale(csvData, chosenXAxis) {
     return yAxis;
   }
   
-  // functions used for updating circles group with a transition to
+  // these functions used for updating circles group with a transition to
   // new circles for both X and Y coordinates
   function renderXCircles(circlesGroup, newXScale, chosenXaxis) {
   
@@ -64,7 +64,7 @@ function xScale(csvData, chosenXAxis) {
     return circlesGroup;
   }
   
-  // functions used for updating circles text with a transition on
+  // these functions used for updating circles text with a transition on
   // new circles for both X and Y coordinates
   function renderXText(circlesGroup, newXScale, chosenXaxis) {
   
@@ -84,13 +84,13 @@ function xScale(csvData, chosenXAxis) {
     return circlesGroup;
   }
   
-  // format number to USD currency
+  // format number to USD
   let formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
   });
   
-  // function used for updating circles group with new tooltip
+  // this function used for updating circles group with new tooltip
   function updateToolTip(circlesGroup, chosenXAxis, chosenYAxis) {
   
     let xpercentsign = "";
