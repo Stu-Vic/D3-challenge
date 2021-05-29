@@ -13,7 +13,7 @@ const width = svgWidth - margin.left - margin.right;
 const height = svgHeight - margin.top - margin.bottom;
 
 // SVG wrapper, appending an SVG group that will hold chart,
-// and shift the latter by left and top margins.
+// and move by left and top margins.
 const svg = d3
   .select("#scatter")
   .append("svg")
@@ -24,7 +24,7 @@ const svg = d3
 const chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Initial Params
+// Initial Parameters
 let chosenXAxis = "poverty";
 let chosenYAxis = "healthcare";
 
